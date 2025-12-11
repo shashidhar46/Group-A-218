@@ -32,3 +32,10 @@ theme_minimal() +
 ggplot(spotify_clean, aes(x = danceability, fill = mode)) +
   geom_histogram(position = "identity", alpha = 0.6, bins = 30) +
   labs(
+     title = "Distribution of Danceability by Mode",
+    x = "Danceability (%)",
+    y = "Count",
+    fill = "Mode"
+    ) +
+    theme_minimal()
+
