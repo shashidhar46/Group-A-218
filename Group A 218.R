@@ -1,3 +1,4 @@
+
 library(ggplot2)
 library(dplyr)
 
@@ -13,6 +14,7 @@ spotify_clean <- spotify %>%
   danceability = as.numeric(`danceability_%`),
     mode        = factor(mode, levels = c("Major", "Minor"))
   )
+
 ttest_res <- t.test(danceability ~ mode, data = spotify_clean)
 print(ttest_res)
 
