@@ -36,6 +36,6 @@ ggplot(spotify_clean, aes(x = danceability, fill = mode)) +
     x = "Danceability (%)",
     y = "Count",
     fill = "Mode"
-    ) +
-    theme_minimal()
+  ) +
+  theme_minimal()
 
