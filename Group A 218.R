@@ -26,3 +26,9 @@ ggplot(spotify_clean, aes(x = mode, y = danceability, fill = mode)) +
     x = "Mode",
     y = "Danceability (%)"
   ) +
+theme_minimal() +
+  theme(legend.position = "none")
+
+ggplot(spotify_clean, aes(x = danceability, fill = mode)) +
+  geom_histogram(position = "identity", alpha = 0.6, bins = 30) +
+  labs(
