@@ -10,3 +10,6 @@ spotify <- read.csv("spotify-2023.csv",
 spotify_clean <- spotify %>%
   filter(mode %in% c("Major", "Minor")) %>%
   mutate(
+  danceability = as.numeric(`danceability_%`),
+    mode        = factor(mode, levels = c("Major", "Minor"))
+  )
